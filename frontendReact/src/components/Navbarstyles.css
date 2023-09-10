@@ -12,13 +12,14 @@
     left: 50%;
     transform: translate(-50%);
     z-index: 9999;
+    background-color: #fff;
 }
-
-.navbar-logo {
-    color: #222;
-    font-size: 2rem;
+.applogo{
+    height: 60px;
+    width: 120px;
     cursor: pointer;
 }
+
 
 .nav-menu {
     display: grid;
