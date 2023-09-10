@@ -1,6 +1,8 @@
 import Hero from "../components/Hero"
+import Models from "../components/Models"
+import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
-
+import AboutUs from "../components/Aboutus"
 function Home() {
     return (
         <>
@@ -14,6 +16,9 @@ function Home() {
                 url="/"
                 btnClass="show"
             />
+            <AboutUs />
+            <Models />
+            <Footer />
         </>
     )
 }
