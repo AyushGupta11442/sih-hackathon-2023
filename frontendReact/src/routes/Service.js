@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+
 function Service (){
     return(
         <>
@@ -7,6 +8,5 @@ function Service (){
         </>
     )
 }
-// sdfsdfssdf
 
 export default Service;
