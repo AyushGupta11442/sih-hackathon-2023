@@ -1,12 +1,17 @@
+import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
-
-function Service (){
-    return(
-        <>
-        <Navbar />
-        <h1>This is service</h1>
-        </>
-    )
+import AboutImg from "../assets/1.jpg"
+import Footer from "../components/Footer"
+import Models from "../components/Models"
+function Service() {
+  return (
+    <>
+      <Navbar />
+      <Hero cName="hero-mid" heroImg={AboutImg} title="Service" />
+      <Models />
+      <Footer />
+    </>
+  );
 }
 
 export default Service;
