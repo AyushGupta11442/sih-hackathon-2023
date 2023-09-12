@@ -1,9 +1,9 @@
 import "./ModelStyles.css";
 
-function TripData(props) {
+function ModelData(props) {
   return (
-    <div classname="t-card">
-      <div classname="t-image">
+    <div className="m-card">
+      <div className="m-image">
         <img src={props.image} alt="image" />
       </div>
       <h4>{props.heading}</h4>
@@ -11,4 +11,4 @@ function TripData(props) {
     </div>
   );
 }
- export default TripData
+ export default ModelData;

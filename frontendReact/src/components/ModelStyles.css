@@ -1,14 +1,62 @@
-.trip{
-  margin: 4rem 6rem;
-  color: #2a2a2a;
-}
-
-.trip h1{
-  font-size: 3rem;
-}
-
-.tripcard{
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
+.model {
+    margin: 4rem 6rem;
+    color: #2a2a2a;
+    text-align: center; 
+  }
+  
+  .model h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem; 
+  }
+  
+  .modelcard {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+  
+  .m-card {
+    width: calc(32% - 20px); 
+    text-align: left; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    cursor: pointer;
+    padding: 1.5rem; 
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff; 
+  }
+  
+  .m-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .m-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    object-fit: cover; 
+  }
+  
+  .m-card h4 {
+    font-size: 1.5rem; 
+    margin: 1rem 0; 
+    color: #333; 
+  }
+  
+  @media screen and (max-width: 850px) {
+    .model {
+      margin: 4rem 2rem;
+    }
+    .modelcard {
+      flex-direction: column;
+      align-items: center; 
+    }
+    .m-card {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
