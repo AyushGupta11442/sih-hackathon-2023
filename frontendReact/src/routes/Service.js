@@ -1,14 +1,14 @@
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
-import AboutImg from "../assets/1.jpg"
+import ServiceImg from "../assets/services.webp"
 import Footer from "../components/Footer"
-import Models from "../components/Models"
+import Model from "../components/Model"
 function Service() {
   return (
     <>
       <Navbar />
-      <Hero cName="hero-mid" heroImg={AboutImg} title="Service" />
-      <Models />
+      <Hero cName="hero-mid" heroImg={ServiceImg} title="Service" />
+      <Model />
       <Footer />
     </>
   );

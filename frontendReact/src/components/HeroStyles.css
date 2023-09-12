@@ -28,16 +28,20 @@ img {
 }
 
 .hero-text h1 {
+  margin-top:4rem;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 1000;
   background: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-text p {
-  font-size: 1.3rem;
-  padding: 0.5rem 0 2rem 0;
+  font-size: 1.2rem;
+  margin-top:2rem;
+  padding: 2rem 12rem 2rem 12rem;
+  color:rgb(217, 215, 215);
+  font-weight:bold;
 }
 
 .hero-text .show {
