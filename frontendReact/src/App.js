@@ -16,18 +16,18 @@ const App = () => {
   return (
     <div className='App'>
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="service" element={<Service />} />
         <Route path="/" element={<Internallayout />}>
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="service" element={<Service />} />
           <Route path="weatherforcasting" element={<WeatherApp />} />
           <Route path="irrigationpractices" element={<Irrigationpractices />} />
           <Route path="pestcontrol" element={<PestControl />} />
           <Route path="livestockmonitoring" element={<LivestockMonitoring />} />
-          <Route path="nutritiondetection" element={<NutritionDetection/>} />
-          <Route path="weedmonitoring" element={<WeedMonitoring/>} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="nutritiondetection" element={<NutritionDetection />} />
+          <Route path="weedmonitoring" element={<WeedMonitoring />} />
         </Route>
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
   )

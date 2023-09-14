@@ -7,16 +7,16 @@ import AboutUs from "../components/Aboutus"
 function About() {
     return (
         <>
-        
+            <Navbar />
             <Hero
                 cName="hero-mid"
                 heroImg={AboutImg}
                 title="About"
             />
-            
+
             <AboutUs />
-        
-           
+            <Footer />
+
         </>
     )
 }

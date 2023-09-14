@@ -10,12 +10,14 @@ import Model4 from "../../assets/M4.jpg";
 import Model5 from "../../assets/M5.png";
 import Model6 from "../../assets/M6.jpg";
 import { useState } from "react";
+import Navbar from "../../components/Navbar";
+
 
 function Service() {
   const [status, setstatus] = useState(true);
   return (
     <>
-
+    <Navbar />
       <Hero cName="hero-mid" heroImg={ServiceImg} title="Service" />
       <nav>
         <div className="model">
@@ -79,6 +81,7 @@ function Service() {
           </div>
         </div>
       </nav>
+      <Footer />
     </>
   );
 }
