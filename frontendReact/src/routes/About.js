@@ -1,9 +1,22 @@
+import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
-function About (){
-    return(
+import AboutImg from "../assets/About.png"
+import Footer from "../components/Footer"
+import AboutUs from "../components/Aboutus"
+
+function About() {
+    return (
         <>
-        <Navbar />
-        <h1>This is about</h1>
+        
+            <Hero
+                cName="hero-mid"
+                heroImg={AboutImg}
+                title="About"
+            />
+            
+            <AboutUs />
+        
+           
         </>
     )
 }
