@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Model from "../components/Model";
+import AboutUs from "../components/Aboutus";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         automated pest control, our platform is the ultimate solution for modern-day 
         agriculture. We aim to make farming more efficient, productive, and sustainable for everyone."
       />
+      <AboutUs />
       <Model />
       <Footer />
     </>
