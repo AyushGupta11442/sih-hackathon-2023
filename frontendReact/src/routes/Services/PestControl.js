@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
-
+import "./PestControlStyles.css"
 function PestControl() {
   const videoConstraints = {
     facingMode: "user",
@@ -8,6 +8,18 @@ function PestControl() {
     height: 720,
   };
 
+  const activatebar = [
+
+      "Activated ........."," "," "," "," ",
+      "No livestock Detected"," "," "," "," ",
+
+  ]
+
+  const deactivatebar = [
+    "Activated ........."," "," "," "," ",
+    "Livestock Detected"," "," "," "," ",
+    
+  ]
   const [videoActive, setVideoActive] = useState(false);
 
   const handleUserMedia = () => {
@@ -19,8 +31,8 @@ function PestControl() {
   };
 
   return (
-    <div className="App">
-      <h1>Webcam Service</h1>
+    <div className="App-pest">
+      <h1 className="cam-h1">Webcam Service</h1>
       <div style={{ position: "relative" }}>
         <Webcam
           audio={false}
@@ -36,7 +48,8 @@ function PestControl() {
             color: videoActive ? "green" : "red",
           }}
         >
-          Status: {videoActive ? "Activate" : "Deactivate"}
+          Status: {videoActive ? [activatebar]
+           : [deactivatebar] }
         </div>
       </div>
     </div>

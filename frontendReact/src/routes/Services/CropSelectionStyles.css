@@ -1,0 +1,66 @@
+/* nutrition.css */
+
+.container-crop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: url("./weather/images/city.jpg");
+    margin: 120px auto;
+  }
+  
+  .container-crop h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-crop {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align:left;
+  }
+  
+  .form-crop {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display:grid;
+    gap:10px;
+  }
+  
+  input[type="number"],
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #33af45;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .cropname {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align:centre;
+  }

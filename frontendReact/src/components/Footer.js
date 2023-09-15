@@ -2,8 +2,8 @@ import "./FooterStyles.css";
 
 const Footer = () => {
     return (
-        <div className="footer">
-            <div className="top">
+        <div className="l-footer">
+            <div className="l-top">
                 <div>
                     <h1>AgroTec</h1>
                     <p>Agriculture made smarter</p>
@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="bottom">
+            <div className="l-bottom">
                 <div>
                     <h4>Project</h4>
                     <a href="/">Changelog</a>

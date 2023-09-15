@@ -51,7 +51,7 @@ function Service() {
               heading="Livestock Monitoring"
               text="Employing advanced technology such as sensors and GPS to track the health, location, and behavior of animals on farms. This real-time data helps farmers optimize feeding, breeding, and disease management, ensuring the well-being and productivity"
             /></Link>
-            <Link className="linker" to="/nutritiondetection"><ModelData
+            <Link className="linker" to="/cropselection"><ModelData
               cname="s-card"
               images="s-image"
               image={Model5}

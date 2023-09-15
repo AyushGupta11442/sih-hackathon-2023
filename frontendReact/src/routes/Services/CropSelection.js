@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./NutritionDetection.css";
+import "./CropSelectionStyles.css";
 
 const indianStates = [
   "Andhra Pradesh",
@@ -79,9 +79,9 @@ class CropForm extends Component {
 
   render() {
     return (
-      <div className="container-nut">
+      <div className="container-crop">
         <h2>Find out the most suitable crop to be grown in your farm.</h2>
-        <div className="form-nut">
+        <div className="form-crop">
           <form onSubmit={this.handleSubmit}>
             <label>
               Nitrogen:
@@ -184,7 +184,7 @@ class CropForm extends Component {
 
           {/* Display the selected crop based on your logic */}
           {this.state.selectedCrop && (
-            <div className="cropname-nut">
+            <div className="cropname">
               <h3>Suggested Crop: {this.state.selectedCrop}</h3>
             </div>
           )}

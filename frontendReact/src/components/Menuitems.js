@@ -18,6 +18,12 @@ export const MenuItems = [
       icons: "fa-solid fa-breifcase"
     },
     {
+      title: "News",
+      url: "/news",
+      cName: "nav-links",
+      icons: "fa-solid fa-briefcase"
+    },
+    {
       title: "Contact",
       url: "/contact",
       cName: "nav-links",
