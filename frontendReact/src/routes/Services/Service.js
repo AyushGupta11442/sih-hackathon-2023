@@ -49,14 +49,14 @@ function Service() {
               images="s-image"
               image={Model4}
               heading="Livestock Monitoring"
-              text="Employing advanced technology such as sensors and GPS to track the health, location, and behavior of animals on farms. This real-time data helps farmers optimize feeding, breeding, and disease management, ensuring the well-being and productivity"
+              text="Fertilizer prediction leverages soil testing and data analysis to recommend specific fertilizer types and quantities for optimal crop growth, maximizing yield and sustainability in agriculture on your website"
             /></Link>
             <Link className="linker" to="/cropselection"><ModelData
               cname="s-card"
               images="s-image"
               image={Model5}
-              heading="Nutrition Deficiency Detection"
-              text="Utilizing technology to identify and address nutrient deficiencies in crops or livestock, ensuring optimal health and growth for a more productive and sustainable agricultural system"
+              heading="Crop Selection"
+              text="Crop selection involves analyzing factors like soil type, climate, and market demand to help farmers choose the most suitable crops for cultivation, optimizing yield and profit in agriculture, considers soil, climate, market demand, and profitability for agriculture"
             /></Link>
             <Link className="linker" to="/weedmonitoring"><ModelData
               cname="s-card"
