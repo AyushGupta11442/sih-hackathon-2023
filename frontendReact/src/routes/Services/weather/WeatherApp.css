@@ -1,97 +1,75 @@
-/* -- Author: W3layouts Author URL: http: //w3layouts.com
-License: Creative Commons Attribution 3.0 Unported License URL: http: //creativecommons.org/licenses/by/3.0/ */
-
-/* -- -- Reset Code -- html, */
-
+/* Reset Code */
 .txt-rt {
   text-align: right;
 }
 
-text align right .txt-lt {
+.txt-lt {
   text-align: left;
 }
 
-text align left .txt-center {
+.txt-center {
   text-align: center;
 }
 
-text align center .float-rt {
+.float-rt {
   float: right;
 }
 
-float right .float-lt {
+.float-lt {
   float: left;
 }
 
-float left .clear {
+.clear {
   clear: both;
 }
 
-clear float .pos-relative {
+.pos-relative {
   position: relative;
 }
 
-Position Relative .pos-absolute {
+.pos-absolute {
   position: absolute;
 }
 
-Position Absolute .vertical-base {
+.vertical-base {
   vertical-align: baseline;
 }
 
-vertical align baseline .vertical-top {
+.vertical-top {
   vertical-align: top;
 }
 
-vertical align top .underline {
+.underline {
   padding-bottom: 5px;
   border-bottom: 1px solid #eee;
   margin: 0 0 20px 0;
 }
 
-/* Add 5px bottom padding and a underline nav*/
-.vertical ul li {
-  display: block;
-}
-
-vertical menu nav.horizontal ul li {
-  display: inline-block;
-}
-
-horizontal menu img {
-  max-width: 100%;
-}
-
-.current-time {
-  font-size: 35px;
-  font-weight: 100;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.current-date {
-  font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 1px;
-}
-
-/* -- //Reset Code -- 
-
--- Index-Page-Styling -- */
-
-
+/* Index-Page-Styling 
 .container {
   width: 65%;
   height: 80vh;
   margin: 50px auto;
   background-color: rgba(0, 0, 0, 0.73);
+} */
+
+.container {
+  margin: top 200px;
+  width: 70%;
+  height: 85vh;
+  margin: 150px auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  /* Add border radius for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add a subtle box shadow */
 }
 
 .city {
   width: 60%;
   height: 100%;
   float: left;
-  background: url("./images/city.jpg");
+  background: url("./images/city1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -108,34 +86,73 @@ horizontal menu img {
   padding: 30px 30px 0 0;
 }
 
-.title h2 {
+/* .title h2 {
   color: #fff;
   font-size: 30px;
   font-weight: bold;
+} */
+.title h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
 }
 
-.title h3 {
+/*.title h3 {
   font-size: 25px;
   font-weight: bold;
   color: #eee;
   margin-top: 0px;
   text-align: right;
+} */
+.title h3 {
+  /* Add text shadow to subtitle */
+  font-size: 30px;
+  font-weight: bold;
+  color: #eee;
+  margin-top: 0px;
+  text-align: right;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.date-time {
+/* .date-time {
   position: absolute;
   bottom: 0;
   color: #fff;
   width: 90%;
   padding: 0 30px 10px 30px;
   font-family: "Oxygen", sans-serif;
+} */
+.date-time {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 90%;
+  padding: 20px 30px 10px 30px;
+  /* Adjust padding for better spacing */
+  font-family: "Oxygen", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Add a semi-transparent background */
+  border-bottom-left-radius: 10px;
+  /* Rounded bottom-left corner */
+  border-bottom-right-radius: 10px;
+  /* Rounded bottom-right corner */
 }
 
-div#txt {
+/*div#txt {
   font-size: 35px;
   font-weight: 100;
   margin-bottom: 10px;
   letter-spacing: 1px;
+}*/
+div#txt {
+  font-size: 40px;
+  /* Increase font size for emphasis */
+  font-weight: bold;
+  margin-bottom: 15px;
+  /* Slightly more spacing */
+  letter-spacing: 2px;
+  /* Add letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .dmy {
@@ -164,17 +181,25 @@ div#txt {
 }
 
 .forecast {
-  width: 40%;
   float: left;
+  width: 315px;
   height: 100%;
 }
 
-.forecast-icon {
+/*.forecast-icon {
   padding: 25px 0;
   background: white;
+}*/
+.forecast-icon {
+  padding: 25px 0;
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent background */
+  border-radius: 10px;
+  /* Rounded corners */
+  text-align: center;
 }
 
-.today-weather h3 {
+/*.today-weather h3 {
   text-transform: capitalize;
   font-size: 50px;
   color: #fff;
@@ -183,6 +208,18 @@ div#txt {
   padding-bottom: 10px;
   border-width: thin;
   border-bottom: 1px solid #eee;
+}*/
+.today-weather h3 {
+  text-transform: capitalize;
+  font-size: 50px;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto 20px;
+  /* More spacing */
+  padding: 10px 0;
+  /* Adjust padding */
+  border-bottom: 2px solid #eee;
+  /* Thicker border */
 }
 
 .today-weather ul li {
@@ -206,8 +243,18 @@ div#txt {
   border-bottom: none;
 }
 
-.footer {
+/*.footer {
   padding-bottom: 20px;
+}*/
+
+.footer {
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  border-top-left-radius: 10px;
+  /* Rounded top-left corner */
+  border-top-right-radius: 10px;
+  /* Rounded top-right corner */
 }
 
 .copyright p {
@@ -218,14 +265,17 @@ div#txt {
   color: #fff;
 }
 
-/* --w3layouts-- --agileits-- */
+.img-box img {
+  padding: 4px;
+
+}
+
+/* Copyright Hover Effect */
 .copyright p a:hover {
   color: #ffeb3b;
 }
 
-/* -- //Index-Page-Styling -- 
-
--- Responsive Code -- */
+/* Responsive Code */
 @media screen and (max-width: 1920px) {
   .container {
     width: 50%;
@@ -257,7 +307,6 @@ div#txt {
 }
 
 @media screen and (max-width: 800px) {
-
   .temperature p {
     font-size: 100px;
   }
@@ -286,7 +335,6 @@ div#txt {
 }
 
 @media screen and (max-width: 667px) {
-
   .container {
     width: 95%;
     margin-top: 30px;
@@ -294,12 +342,11 @@ div#txt {
 }
 
 @media screen and (max-width: 640px) {
-
   div#txt {
     font-size: 25px;
   }
 
-  --w3layouts-- --agileits-- .dmy {
+  .dmy {
     padding-top: 17px;
   }
 
@@ -309,8 +356,6 @@ div#txt {
 }
 
 @media screen and (max-width: 603px) {
-
-
   .city {
     width: 100%;
     min-height: 300px;
@@ -347,9 +392,7 @@ div#txt {
   }
 }
 
-
 @media screen and (max-width: 480px) {
-
   .container {
     margin-bottom: 20px;
   }
@@ -448,7 +491,6 @@ div#txt {
 }
 
 @media screen and (max-width: 375px) {
-
   .city {
     min-height: 315px;
   }
@@ -466,7 +508,7 @@ div#txt {
   }
 }
 
-/* //Responsive Code -- */
+/* Additional Styles */
 .cityHead {
   display: flex;
   align-items: center;

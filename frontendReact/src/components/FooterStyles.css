@@ -1,10 +1,10 @@
-.footer {
+.l-footer {
     padding: 4rem 6rem;
     background: #000;
     color: #fff;
 }
 
-.top {
+.l-top {
     display: flex;
     align-items: center;
     text-align: start;
@@ -12,17 +12,17 @@
     flex-wrap: wrap;
 }
 
-.top i {
+.l-top i {
     color: #fff;
     font-size: 2rem;
     margin-left: 1rem;
 }
 
-.top i:hover {
+.l-top i:hover {
     color: green;
 }
 
-.bottom {
+.l-bottom {
     padding-top: 2rem;
     text-align: start;
     display: flex;
@@ -30,17 +30,17 @@
     flex-wrap: wrap;
 }
 
-.bottom div {
+.l-bottom div {
     display: flex;
     flex-direction: column;
 }
 
-.bottom h4 {
+.l-bottom h4 {
     font-size: 1.3rem;
     padding: 1rem 0 0.8rem 0;
 }
 
-.bottom a {
+.l-bottom a {
     text-decoration: none;
     color: #fafafa;
     padding-bottom: 0.4rem;
