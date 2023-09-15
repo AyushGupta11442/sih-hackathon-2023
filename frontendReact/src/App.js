@@ -8,7 +8,7 @@ import WeatherApp from "./routes/Services/weather/WeatherApp"
 import Irrigationpractices from "./routes/Services/Irrigationpractices"
 import Internallayout from "./routes/internallayout"
 import PestControl from "./routes/Services/PestControl"
-import LivestockMonitoring from "./routes/Services/LivestockMonitoring"
+import FertilisationForm from "./routes/Services/FertilisationPrediction"
 import WeedMonitoring from "./routes/Services/WeedMonitoring"
 import FetchData from "./routes/News"
 import CropForm from "./routes/Services/CropSelection"
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="weatherforcasting" element={<WeatherApp />} />
           <Route path="irrigationpractices" element={<Irrigationpractices />} />
           <Route path="pestcontrol" element={<PestControl />} />
-          <Route path="livestockmonitoring" element={<LivestockMonitoring />} />
+          <Route path="fertilisationdetection" element={<FertilisationForm />} />
           <Route path="weedmonitoring" element={<WeedMonitoring />} />
           <Route path="cropselection" element={<CropForm/>}/>
         </Route>

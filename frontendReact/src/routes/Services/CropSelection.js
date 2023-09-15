@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./CropSelectionStyles.css";
+import axios from "axios"
+
+
 
 const indianStates = [
   "Andhra Pradesh",
@@ -58,7 +61,7 @@ class CropForm extends Component {
       rainfall: "",
       state: "",
       city: "",
-      selectedCrop: "",
+      message: "",
     };
   }
 
@@ -67,15 +70,33 @@ class CropForm extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    // Implement logic to determine the suitable crop here
-    // You can use the state values to perform calculations and select a crop
-    // For simplicity, let's assume a random crop is selected here
-    const crops = ["Wheat", "Rice", "Maize", "Cotton", "Sugarcane"];
-    const randomCrop = crops[Math.floor(Math.random() * crops.length)];
-    this.setState({ selectedCrop: randomCrop });
+
+    // Prepare the input data object
+    const inputData = {
+      nitrogen: parseInt(this.state.nitrogen, 10),
+      phosphorous: parseInt( this.state.phosphorus , 10),
+      potassium: parseInt( this.state.potassium , 10 ),
+      pH: this.state.pHLevel, // Changed "ph" to "pH" to match the input data
+      rainfall: this.state.rainfall,
+      city: this.state.city,
+      state: this.state.state, // Changed "Uttaranchal" to "Uttarakhand" to match the state name
+    };
+
+    try {
+      // Make a POST request to your API endpoint
+      const response = await axios.post('http://127.0.0.1:5000/crop-predict', inputData);
+
+      // Update the state with the response message
+      this.setState({ message: response.data.message });
+      console.log(this.state.message)
+    } catch (error) {
+      // Handle errors
+      console.error('error', error);
+    }
   };
+
 
   render() {
     return (
@@ -183,9 +204,9 @@ class CropForm extends Component {
           </form>
 
           {/* Display the selected crop based on your logic */}
-          {this.state.selectedCrop && (
+          {this.state.message && (
             <div className="cropname">
-              <h3>Suggested Crop: {this.state.selectedCrop}</h3>
+              <h3>Suggested Crop: {this.state.message}</h3>
             </div>
           )}
         </div>
