@@ -2,6 +2,7 @@ import React, { useState, useEffect, Component } from "react";
 import axios from "axios";
 import apiKeys from "./apiKeys";
 import ReactAnimatedWeather from "react-animated-weather";
+import SearchIcon from "./images/search.png"
 
 function Forcast(props) {
   const [query, setQuery] = useState("");
@@ -66,7 +67,7 @@ function Forcast(props) {
           <div className="img-box">
             {" "}
             <img
-              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
+              src={SearchIcon}
               onClick={search}
             />
           </div>

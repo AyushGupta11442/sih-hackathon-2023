@@ -9,25 +9,27 @@ import Irrigationpractices from "./routes/Services/Irrigationpractices"
 import Internallayout from "./routes/internallayout"
 import PestControl from "./routes/Services/PestControl"
 import LivestockMonitoring from "./routes/Services/LivestockMonitoring"
-import NutritionDetection from "./routes/Services/NutritionDetection"
 import WeedMonitoring from "./routes/Services/WeedMonitoring"
+import FetchData from "./routes/News"
+import CropForm from "./routes/Services/CropSelection"
 
 const App = () => {
   return (
     <div className='App'>
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="service" element={<Service />} />
         <Route path="/" element={<Internallayout />}>
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="service" element={<Service />} />
           <Route path="weatherforcasting" element={<WeatherApp />} />
           <Route path="irrigationpractices" element={<Irrigationpractices />} />
           <Route path="pestcontrol" element={<PestControl />} />
           <Route path="livestockmonitoring" element={<LivestockMonitoring />} />
-          <Route path="nutritiondetection" element={<NutritionDetection/>} />
-          <Route path="weedmonitoring" element={<WeedMonitoring/>} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="weedmonitoring" element={<WeedMonitoring />} />
+          <Route path="cropselection" element={<CropForm/>}/>
         </Route>
+        <Route path="news" element={<FetchData />}/>
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
   )
