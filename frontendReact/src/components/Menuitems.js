@@ -29,5 +29,11 @@ export const MenuItems = [
       cName: "nav-links",
       icons: "fa-solid fa-address-book"
     },
+    {
+      title: "Market",
+      url: "http://localhost:3000",
+      cName: "nav-links",
+      icons: "fa-solid fa-address-book"
+    }
   ];
   
