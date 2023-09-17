@@ -39,7 +39,7 @@ function Service() {
               cname="s-card"
               images="s-image"
               image={Model3}
-              heading="Automated Pest Detection"
+              heading="Crop Disease Detection"
               text="Utilizing technology for precise and eco-friendly pest management, safeguarding crops and enhancing agricultural yields through automated systems and data-driven approaches"
             /></Link>
           </div>
@@ -62,9 +62,8 @@ function Service() {
               cname="s-card"
               images="s-image"
               image={Model6}
-              heading="Crop Disease Detection"
-              text="Protect your crops from pests and reduce the use of harmful pesticides with our automated pest control 
-            system. Our technology uses AI and machine learning to identify and control pests, minimizing the risk of damage to your crops"
+              heading="पूछें"
+              text="चैट बॉट (Chat Bot) एक कंप्यूटर प्रोग्राम है जो आपके साथ टेक्स्ट चैट के माध्यम से बातचीत कर सकता है। यह स्वतंत्रता से सवालों का उत्तर देता है और कार्यों को सम्पन्न कर सकता है, आमतौर पर ऑनलाइन सेवाओं के साथ उपयोग होता है, जैसे कि ग्राहक समर्थन या सूचना प्रदान करना।"
             /></Link>
           </div>
         </div>

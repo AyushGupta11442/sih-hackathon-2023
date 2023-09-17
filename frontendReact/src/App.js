@@ -12,7 +12,7 @@ import FertilisationForm from "./routes/Services/FertilisationPrediction"
 import WeedMonitoring from "./routes/Services/WeedMonitoring"
 import FetchData from "./routes/News"
 import CropForm from "./routes/Services/CropSelection"
-
+import ChatBot from "./routes/ChatBot"
 const App = () => {
   return (
     <div className='App'>
@@ -28,6 +28,7 @@ const App = () => {
           <Route path="weedmonitoring" element={<WeedMonitoring />} />
           <Route path="cropselection" element={<CropForm/>}/>
         </Route>
+        <Route path="bot" element={<ChatBot/>}/>
         <Route path="news" element={<FetchData />}/>
         <Route path="contact" element={<Contact />} />
       </Routes>
