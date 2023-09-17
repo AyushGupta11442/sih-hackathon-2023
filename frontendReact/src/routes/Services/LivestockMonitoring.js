@@ -1,6 +1,7 @@
 import React from 'react'
 
 const LivestockMonitoring = () => {
+    
     return (
         <div>
             <h1>LivestockMonitoring</h1>

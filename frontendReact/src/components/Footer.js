@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="l-footer">
             <div className="l-top">
                 <div>
-                    <h1>AgroTec</h1>
+                    <h1>SmartFarm</h1>
                     <p>Agriculture made smarter</p>
                 </div>
                 <div>

@@ -55,8 +55,8 @@
 
 .container {
   margin: top 200px;
-  width: 70%;
-  height: 85vh;
+  width: 80%;
+  height: 100vh;
   margin: 150px auto;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
@@ -172,17 +172,17 @@ div#txt {
   font-family: "Raleway", sans-serif;
   font-size: 80px;
   font-weight: 100;
-  margin: 0 40px;
+  margin: 0 60px;
 }
 
 .temperature p span {
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 200; 
 }
 
 .forecast {
   float: left;
-  width: 315px;
+  width: 290px;
   height: 100%;
 }
 

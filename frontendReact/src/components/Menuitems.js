@@ -6,12 +6,6 @@ export const MenuItems = [
       icons: "fa-solid fa-house-user"
     },
     {
-      title: "About",
-      url: "/about",
-      cName: "nav-links",
-      icons: "fa-solid fa-circle-info"
-    },
-    {
       title: "Service",
       url: "/service",
       cName: "nav-links",
@@ -22,6 +16,24 @@ export const MenuItems = [
       url: "/news",
       cName: "nav-links",
       icons: "fa-solid fa-briefcase"
+    },
+    {
+      title: "Market",
+      url: "http://localhost:3000",
+      cName: "nav-links",
+      icons: "fa-solid fa-address-book"
+    },
+    {
+      title: "पूछें",
+      url: "/bot",
+      cName: "nav-links",
+      icons: "fa-solid fa-address-book"
+    },
+    {
+      title: "About",
+      url: "/about",
+      cName: "nav-links",
+      icons: "fa-solid fa-circle-info"
     },
     {
       title: "Contact",

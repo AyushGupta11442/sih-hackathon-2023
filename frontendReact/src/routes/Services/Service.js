@@ -39,33 +39,31 @@ function Service() {
               cname="s-card"
               images="s-image"
               image={Model3}
-              heading="Automated Pest Control"
+              heading="Crop Disease Detection"
               text="Utilizing technology for precise and eco-friendly pest management, safeguarding crops and enhancing agricultural yields through automated systems and data-driven approaches"
             /></Link>
           </div>
           <div className="modelcard-service">
-            <Link className="linker" to="/livestockmonitoring"><ModelData
+            <Link className="linker" to="/fertilisationdetection"><ModelData
               cname="s-card"
               images="s-image"
               image={Model4}
-              heading="Livestock Monitoring"
+              heading="Fertilisation Detection"
               text="Employing advanced technology such as sensors and GPS to track the health, location, and behavior of animals on farms. This real-time data helps farmers optimize feeding, breeding, and disease management, ensuring the well-being and productivity"
             /></Link>
             <Link className="linker" to="/cropselection"><ModelData
               cname="s-card"
               images="s-image"
               image={Model5}
-              heading="Nutrition Deficiency Detection"
-              text="Utilizing technology to identify and address nutrient deficiencies in crops or livestock, ensuring optimal health and growth for a more productive and sustainable agricultural system"
+              heading="Crop Selection"
+              text="Utilizing technology to identify and address nutrient deficiencies in crops or livestock, ensuring optimal health and growth for a more productive and sustainable agricultural systemm, it choose crops based on climate, soil, and local market demand"
             /></Link>
             <Link className="linker" to="/weedmonitoring"><ModelData
               cname="s-card"
               images="s-image"
               image={Model6}
-              heading="Weed Monitoring"
-              text="Protect your crops from pests and reduce the use of harmful pesticides with our automated pest control 
-            system. Our technology uses AI and machine learning to identify and control pests, minimizing the 
-            risk of damage to your crops"
+              heading="पूछें"
+              text="चैट बॉट (Chat Bot) एक कंप्यूटर प्रोग्राम है जो आपके साथ टेक्स्ट चैट के माध्यम से बातचीत कर सकता है। यह स्वतंत्रता से सवालों का उत्तर देता है और कार्यों को सम्पन्न कर सकता है, आमतौर पर ऑनलाइन सेवाओं के साथ उपयोग होता है, जैसे कि ग्राहक समर्थन या सूचना प्रदान करना।"
             /></Link>
           </div>
         </div>

@@ -12,6 +12,7 @@ import io
 import numpy as np
 import pandas as pd
 from utils.disease import disease_dic
+from flask_cors import CORS
 
 
 
@@ -128,33 +129,53 @@ def predict_image(img, model=disease_model):
 # ------------------------------------ FLASK APP -------------------------------------------------
 
 app = Flask(__name__)
+CORS(app)
 
 
-# crop recomendation
-@ app.route('/crop-predict', methods=['POST'])
+@app.route('/disease-predict', methods=['POST'])
+def upload_image():
+    try:
+        # Check if the request contains an image file
+        if 'image' not in request.files:
+            return jsonify({'error': 'No image part'})
+        image = request.files['image']
+        img = image.read()
+        prediction = predict_image(img)
+        response = (str(disease_dic[prediction]))
+        return jsonify({"message": response}), 201
+    except Exception as e:
+        print(e)
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route('/crop-predict', methods=['POST'])
 def crop_prediction():
-    title = 'Harvestify - Crop Recommendation'
-
-    if request.method == 'POST':
+    try:
         json_data = request.json
         N = int(json_data.get('nitrogen'))
         P = int(json_data.get('phosphorous'))
-        K = int(json_data.get('pottasium'))
-        ph = float(json_data.get('ph'))
-        rainfall = float(request.form['rainfall'])
-
-        # state = request.form.get("stt")
+        K = int(json_data.get('potassium'))  # Correct the key name to 'potassium'
+        ph = float(json_data.get('pH'))  # Correct the key name to 'pH'
+        rainfall = float(json_data.get('rainfall'))
+        state = str(json_data.get('state'))
         city = str(json_data.get('city'))
 
-        if weather_fetch(city) != None:
-            temperature, humidity = weather_fetch(city)
+        temperature, humidity = weather_fetch('Kichha')
+    
+
+        if temperature is not None and humidity is not None:
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
-            print(my_prediction)
             final_prediction = my_prediction[0]
-            # return jsonify({"message": final_prediction}), 201
+            response = str(final_prediction)
         else:
-            final_prediction = str("try again")
+            response = "Weather data not available for the given city."
+
+        return jsonify({"message": response}), 201
+
+    except Exception as e:
+        print(e)
+        return jsonify({"error": str(e)}), 400
 
 
 
@@ -166,17 +187,16 @@ def fert_recommend():
     try:
         json_data = request.json
         crop_name = str(json_data.get('cropname'))
-        N = int(json_data.get('nitrogen'))
-        P = int(json_data.get('phosphorous'))
-        K = int(json_data.get('pottasium'))
+        # Handle missing or invalid values gracefully
+        N = int(json_data.get('nitrogen', 0))
+        P = int(json_data.get('phosphorous', 0))
+        K = int(json_data.get('pottasium', 0))
+        print(crop_name , N , P , K)
         # ph = float(request.form['ph'])
-
         df = pd.read_csv('Data/fertilizer.csv')
-
         nr = df[df['Crop'] == crop_name]['N'].iloc[0]
         pr = df[df['Crop'] == crop_name]['P'].iloc[0]
         kr = df[df['Crop'] == crop_name]['K'].iloc[0]
-
         n = nr - N
         p = pr - P
         k = kr - K
@@ -200,6 +220,7 @@ def fert_recommend():
         response = str(fertilizer_dic[key])
         return jsonify({"message": response}), 201
     except Exception as e:
+        print(e)
         return jsonify({"error": str(e)}), 400
     
     
@@ -230,7 +251,7 @@ def submit_form():
 # Define a route to retrieve all data
 @app.route('/get-data', methods=['GET'])
 def get_data():
-    return jsonify({"data": data_store})
+    return jsonify({"data": "hello"})
 
 if __name__ == '__main__':
     app.run(debug=True)

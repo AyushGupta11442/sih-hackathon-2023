@@ -1,0 +1,105 @@
+/* Chatbot container */
+.chatbot-container {
+    max-width: 100%;
+    width: 500px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 50px auto 20px;
+  }
+  
+  /* Chat header */
+  .chat-header {
+    background-color: #0074d9;
+    color: white;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Chat container */
+  .chat-container {
+    padding: 12px;
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .chat-container div {
+    margin-bottom: 10px;
+  }
+  
+  /* User input container */
+  .input-container {
+    padding: 12px;
+    background-color: #fff;
+  }
+  
+  /* Input and buttons container */
+  .input-and-buttons-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* User input field */
+  #user-input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  /* Start and stop listening buttons */
+  #start-listening,
+  #stop-listening {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #start-listening:hover,
+  #stop-listening:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .chatbot-container {
+      width: 90%;
+      border-radius: 10px;
+    }
+  
+    #user-input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Animation for pop-up effect */
+  @keyframes popUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animation */
+  .chatbot-container.active {
+    animation: popUp 0.5s ease-in-out;
+  }
+  

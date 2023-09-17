@@ -1,59 +1,60 @@
 import React, { useState } from "react";
-import Webcam from "react-webcam";
-import "./PestControlStyles.css"
+import axios from "axios";
+import "./PestControlStyles.css";
+
 function PestControl() {
-  const videoConstraints = {
-    facingMode: "user",
-    width: 1200,
-    height: 720,
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [prediction, setPrediction] = useState(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
   };
 
-  const activatebar = [
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      alert("Please select an image to upload.");
+      return;
+    }
 
-      "Activated ........."," "," "," "," ",
-      "No livestock Detected"," "," "," "," ",
+    const formData = new FormData();
+    formData.append("image", selectedFile);
 
-  ]
+    try {
+      const response = await axios.post("http://127.0.0.1:5000/disease-predict", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
-  const deactivatebar = [
-    "Activated ........."," "," "," "," ",
-    "Livestock Detected"," "," "," "," ",
-    
-  ]
-  const [videoActive, setVideoActive] = useState(false);
+      // Extract the message from the API response
+      const predictionMessage = response.data.message;
 
-  const handleUserMedia = () => {
-    setVideoActive(true);
-  };
-
-  const handleUserMediaError = () => {
-    setVideoActive(false);
+      // Handle the prediction message
+      setPrediction(predictionMessage);
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
   };
 
   return (
-    <div className="App-pest">
-      <h1 className="cam-h1">Webcam Service</h1>
-      <div style={{ position: "relative" }}>
-        <Webcam
-          audio={false}
-          videoConstraints={videoConstraints}
-          onUserMedia={handleUserMedia}
-          onUserMediaError={handleUserMediaError}
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: 10,
-            right: 200,
-            color: videoActive ? "green" : "red",
-          }}
-        >
-          Status: {videoActive ? [activatebar]
-           : [deactivatebar] }
+    <div className="crop-disease-container">
+      <h1>Crop Disease Detection</h1>
+      <form>
+        <input type="file" accept="image/*" onChange={handleFileChange} />
+        <button type="button" onClick={handleUpload}>
+          Upload
+        </button>
+      </form>
+      {prediction && (
+        <div className="prediction-result">
+          <h2>Prediction Result:</h2>
+          <div dangerouslySetInnerHTML={{ __html: prediction }} />
         </div>
-      </div>
+      )}
     </div>
   );
 }
 
 export default PestControl;
+
